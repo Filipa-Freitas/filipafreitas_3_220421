@@ -1,41 +1,32 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-    font-family: "Roboto", sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
-    color:black;
-    list-style: none;
-    }
+@import "./utils/variables";
+@import "./base/global";
 
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
+
 body {
-    font-family: "Roboto", sans-serif;
+    
     img {
         width:100%;
     }
 }
-header, section, footer {
-    padding: 1.5rem;
+h1, h2 {
+    font-size: map-get($font-size, big );
 }
+h3 , h4, p{
+    font-size: map-get($font-size , medium );
+}
+li, input, span {
+    font-size: map-get($font-size , small );
+}
+h1, h2, h3, h4, li, span, input {
+    font-weight: 700;
+}
+p {
+    font-weight: 300;
+}
+// ----------------------
+header, .map__description, .concept, .restaurants, footer {
+    padding: 1.5rem;
+    }
 header {
     display:flex;
     justify-content: center;
@@ -45,10 +36,12 @@ header img {
     width: 200px;
     height:auto;
 }
+
 .btn {
     background: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);   
     font-family: "Roboto", sans-serif;
-    color: white;
+    font-size: map-get($font-size , small);
+    color: $color-neutral;
     border: none;
     border-radius: 20rem;
     padding: 1em 3em;
@@ -56,25 +49,67 @@ header img {
 }
 .map {
     text-align: center;
+    background-color: $color-neutral-light;
+    form {
+        background-color: darken($color-neutral-light, 5%);
+        padding: 1rem;
+        input {
+            border: none;
+            background-color: darken($color-neutral-light, 5%);
+            outline: none;
+        }
+    }
+    
+}
+.container-concept {
+    margin-left: 0.6rem;
 }
 .concept__item {
     display: flex;
-    justify-content: center ;
+    justify-content: flex-start ;
     align-items: center;
-    width: 80%;
-    border-radius: 20rem;
-    padding: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: $color-neutral-light;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    margin-bottom: 1rem;
-
+    margin-bottom: 1.5rem;
+    position: relative;
+    i {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        font-size: 1.2rem;
+    }
+    .container-number {
+        background: $color-primary;
+        border-radius: 100%;
+        height: 1.5rem;
+        width: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: -0.6rem;
+        span {
+            color: $color-neutral;
+        }
+    }
+    &:last-child {
+        background-color: lighten($color-primary, 35%);
+        i {
+            color: $color-primary;
+        }
+    }
 }
 .restaurants {
-    background-color: #f2f2f2;
+    background-color: $color-neutral-light;
 }
 .restaurant {
     display: block;
     border-radius: 1rem;
-    background-color: white;
+    background-color: $color-neutral;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     &__top {
         position: relative;
     }
@@ -89,12 +124,31 @@ header img {
         top:1rem;
         background-color: $color-tertiary;
         border-radius: 0.1rem;
-        padding: 0.5rem;
+        padding: 0.4rem 1rem;
+        span {
+            color:darken($color-tertiary, 50%);
+        }
     }
     &__bottom {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 1rem;;
+        padding: 1rem;
+        i {
+            font-size: map-get($font-size, big);
+        }
+    }
+}
+
+footer {
+    background-color: $colot-neutral-dark;
+    h4 {
+        color: $color-neutral;
+        font-family: "Shrikhand", serif;
+        font-weight: normal;
+        }
+    a, i {
+        color: $color-neutral;
+        font-weight: normal;
     }
 }
