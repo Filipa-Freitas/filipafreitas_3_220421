@@ -1,9 +1,31 @@
-// .main-ledelice {
-//     position:relative;
-// }
+.main-ledelice {
+    background-image: url(../img/restaurants/le-delice-des-sens_jv6e9z_c_scale,w_500.jpg);
+    background-position: top;
+    background-size: contain;
+    padding-top: 14rem;
+}
 .menu {
     padding: 1.5rem;
     background-color: $color-neutral-light;
     border-radius: 2rem 2rem 0 0;
-    // position: absolute;
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i {
+            font-size: map-get($font-size, big);
+        }
+    }
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: $color-neutral;
+    padding: 0.7rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+
 }

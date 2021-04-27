@@ -24,10 +24,36 @@ time, mark, audio, video {
   list-style: none;
 }
 
+.main-ledelice {
+  background-image: url(../img/restaurants/le-delice-des-sens_jv6e9z_c_scale,w_500.jpg);
+  background-position: top;
+  background-size: contain;
+  padding-top: 14rem;
+}
+
 .menu {
   padding: 1.5rem;
   background-color: #f2f2f2;
   border-radius: 2rem 2rem 0 0;
+}
+.menu__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__title i {
+  font-size: 1.5rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: white;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 body img {
@@ -38,11 +64,11 @@ h1, h2 {
   font-size: 1.5rem;
 }
 
-h3, h4, p {
+h3, h4 {
   font-size: 1.1rem;
 }
 
-li, input, span {
+li, input, span, p {
   font-size: 0.9rem;
 }
 
