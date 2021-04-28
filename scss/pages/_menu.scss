@@ -1,5 +1,20 @@
+.main-alafrancaise {
+    background-image: url(../img/restaurants/a-la-francaise_wxhas4_c_scale,w_500.jpg);
+
+}
+.main-lanote {
+    background-image: url(../img/restaurants/la-note-enchantee_lrz9i0_c_scale,w_500.jpg);
+
+}
+.main-lapalette {
+    background-image: url(../img/restaurants/la-palette-du-gout_aqwtpg_c_scale,w_500.jpg);
+
+}
 .main-ledelice {
     background-image: url(../img/restaurants/le-delice-des-sens_jv6e9z_c_scale,w_500.jpg);
+   
+}
+.main-ledelice, .main-lapalette, .main-lanote, .main-alafrancaise {
     background-position: top;
     background-size: contain;
     padding-top: 14rem;
@@ -12,9 +27,31 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 1.5rem;
         i {
             font-size: map-get($font-size, big);
         }
+        h1 {
+            font-family: "Shrikhand", serif;
+            font-weight: normal;
+        }
+    }
+    .btn-box {
+        text-align: center;
+    }
+    h3 {
+        font-weight: 300;
+        position: relative;
+        margin-bottom: 1.5rem;
+    &::after {
+        content: " ";
+        height: 2px;
+        width: 2rem;
+        left: 0;
+        bottom: -0.4rem;
+        position: absolute;
+        background-color: $color-tertiary;
+    }
     }
 }
 .card {
@@ -26,6 +63,8 @@
     border-radius: 1rem;
     margin-bottom: 1rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-
+    &__title {
+        font-weight: bold;
+    }
 
 }
