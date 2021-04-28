@@ -10,6 +10,7 @@ body {
 }
 h1, h2 {
     font-size: map-get($font-size, big );
+    margin-bottom: 1.5rem;
 }
 h3 , h4 {
     font-size: map-get($font-size , medium );
@@ -31,9 +32,18 @@ header {
     display:flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    i {
+        position: absolute;
+        bottom: 2.1rem;
+        left: 1rem;
+        color: $colot-neutral-dark;
+    }
 }
 header img {
-    width: 200px;
+    width: 150px;
     height:auto;
 }
 
@@ -50,14 +60,26 @@ header img {
 .map {
     text-align: center;
     background-color: $color-neutral-light;
-    form {
+    &__form {
         background-color: darken($color-neutral-light, 5%);
         padding: 1rem;
+        .input-box {
+            margin-left: 2rem;
+        }
+        i {
+            color: $colot-neutral-dark;
+        }
         input {
             border: none;
             background-color: darken($color-neutral-light, 5%);
             outline: none;
+            width:150px;
+            color: $colot-neutral-dark;
         }
+    }
+    &__description .btn {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 }
 .container-concept {
@@ -145,9 +167,20 @@ footer {
         color: $color-neutral;
         font-family: "Shrikhand", serif;
         font-weight: normal;
-        }
+        margin-bottom: 1.5rem;
+    }
+    li {
+        margin-bottom: 0.8rem;
+
+    }
     a, i {
         color: $color-neutral;
-        font-weight: normal;
+        font-weight: 400;
+    }
+    i{
+        margin-right: 0.8rem;
+    }
+    .fas.fa-hands-helping {
+        font-size: 0.6rem;
     }
 }

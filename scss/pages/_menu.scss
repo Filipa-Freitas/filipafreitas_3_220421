@@ -27,7 +27,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 1.5rem;
         i {
             font-size: map-get($font-size, big);
         }
@@ -38,6 +37,10 @@
     }
     .btn-box {
         text-align: center;
+        margin-bottom: 1.5rem;
+        .btn {
+            margin-top: 1.5rem;
+        }
     }
     h3 {
         font-weight: 300;
@@ -52,6 +55,9 @@
         position: absolute;
         background-color: $color-tertiary;
     }
+    }
+    &__cat {
+        margin-bottom: 1.5rem;
     }
 }
 .card {
