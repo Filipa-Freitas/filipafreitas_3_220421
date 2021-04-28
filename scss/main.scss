@@ -34,7 +34,7 @@ header {
     align-items: center;
     position: relative;
     z-index: 1;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: $box-shadow;
     i {
         position: absolute;
         bottom: 2.1rem;
@@ -55,7 +55,7 @@ header img {
     border: none;
     border-radius: 20rem;
     padding: 1em 3em;
-
+    box-shadow: $box-shadow;
 }
 .map {
     text-align: center;
@@ -77,9 +77,14 @@ header img {
             color: $colot-neutral-dark;
         }
     }
-    &__description .btn {
+    &__description {
+        h1 {
+            padding: 0 2rem 0 2rem;
+        }
+        .btn {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
+        }
     }
 }
 .container-concept {
@@ -93,7 +98,7 @@ header img {
     border-radius: 1rem;
     padding: 1.5rem;
     background-color: $color-neutral-light;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: $box-shadow;
     margin-bottom: 1.5rem;
     position: relative;
     i {
@@ -125,12 +130,23 @@ header img {
 .restaurants {
     background-color: $color-neutral-light;
 }
+.container-restaurants {
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+}
 .restaurant {
     display: block;
     border-radius: 1rem;
     background-color: $color-neutral;
     margin-bottom: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: $box-shadow;
+    @media only screen and (min-width: 768px) {
+        width: 48%
+    }
     &__top {
         position: relative;
     }

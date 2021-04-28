@@ -63,6 +63,13 @@ time, mark, audio, video {
   font-family: "Shrikhand", serif;
   font-weight: normal;
 }
+@media only screen and (min-width: 768px) {
+  .menu__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .menu .btn-box {
   text-align: center;
   margin-bottom: 1.5rem;
@@ -87,6 +94,11 @@ time, mark, audio, video {
 .menu__cat {
   margin-bottom: 1.5rem;
 }
+@media only screen and (min-width: 768px) {
+  .menu__cat {
+    width: 48%;
+  }
+}
 
 .card {
   display: flex;
@@ -97,6 +109,11 @@ time, mark, audio, video {
   border-radius: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 100%;
+  }
 }
 .card__title {
   font-weight: bold;
@@ -159,6 +176,7 @@ header img {
   border: none;
   border-radius: 20rem;
   padding: 1em 3em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .map {
@@ -181,6 +199,9 @@ header img {
   outline: none;
   width: 150px;
   color: #3d3d3d;
+}
+.map__description h1 {
+  padding: 0 2rem 0 2rem;
 }
 .map__description .btn {
   margin-top: 1.5rem;
@@ -233,12 +254,25 @@ header img {
   background-color: #f2f2f2;
 }
 
+@media only screen and (min-width: 768px) {
+  .container-restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .restaurant {
   display: block;
   border-radius: 1rem;
   background-color: white;
   margin-bottom: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+@media only screen and (min-width: 768px) {
+  .restaurant {
+    width: 48%;
+  }
 }
 .restaurant__top {
   position: relative;
