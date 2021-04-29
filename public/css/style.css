@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -97,6 +98,11 @@ time, mark, audio, video {
 @media only screen and (min-width: 768px) {
   .menu__cat {
     width: 48%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .menu__cat {
+    width: 32%;
   }
 }
 
@@ -268,11 +274,23 @@ header img {
   background-color: white;
   margin-bottom: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: relative;
 }
 @media only screen and (min-width: 768px) {
   .restaurant {
     width: 48%;
   }
+}
+.restaurant a[href="#"] {
+  display: block;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1rem;
+}
+.restaurant a[href="#"] i {
+  font-size: 1.5rem;
+  z-index: 1;
+  position: relative;
 }
 .restaurant__top {
   position: relative;
@@ -294,17 +312,40 @@ header img {
   color: #1b6150;
 }
 .restaurant__bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   padding: 1rem;
 }
-.restaurant__bottom i {
-  font-size: 1.5rem;
+
+.restaurant i:hover::after {
+  transform: scalex(1);
+}
+.restaurant i::after {
+  content: " ";
+  font-weight: 900;
+  background: -moz-linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  background: -webkit-linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transform: scalex(0);
+  transform-origin: top;
+  transition: transform ease-in-out 250ms;
 }
 
 footer {
   background-color: #3d3d3d;
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    text-align: center;
+  }
 }
 footer h4 {
   color: white;
@@ -324,6 +365,12 @@ footer i {
 }
 footer .fas.fa-hands-helping {
   font-size: 0.6rem;
+}
+@media only screen and (min-width: 768px) {
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

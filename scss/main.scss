@@ -144,8 +144,20 @@ header img {
     background-color: $color-neutral;
     margin-bottom: 1.5rem;
     box-shadow: $box-shadow;
+    position: relative;
     @media only screen and (min-width: 768px) {
         width: 48%
+    }
+    a[href="#"] {
+        display: block;
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1rem;
+        i {
+            font-size: map-get($font-size, big);
+            z-index: 1;
+            position: relative;
+        }
     }
     &__top {
         position: relative;
@@ -167,18 +179,42 @@ header img {
         }
     }
     &__bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
         padding: 1rem;
-        i {
-            font-size: map-get($font-size, big);
+    }
+}
+.restaurant i {
+    &:hover {
+        &::after {
+            transform: scalex(1);
         }
+    }
+    &::after {
+        content: " \f004 ";
+        font-weight: 900;
+        background: -moz-linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+        background: -webkit-linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+        background: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index: 1;
+        transform: scalex(0);
+        transform-origin: top;
+        transition: transform ease-in-out 250ms;
     }
 }
 
 footer {
     background-color: $colot-neutral-dark;
+    @media only screen and (min-width: 768px) {
+        text-align: center;
+    }
     h4 {
         color: $color-neutral;
         font-family: "Shrikhand", serif;
@@ -187,7 +223,6 @@ footer {
     }
     li {
         margin-bottom: 0.8rem;
-
     }
     a, i {
         color: $color-neutral;
@@ -198,5 +233,11 @@ footer {
     }
     .fas.fa-hands-helping {
         font-size: 0.6rem;
+    }
+    ul {
+        @media only screen and (min-width: 768px) {
+            display: flex;
+            justify-content: space-evenly;
+        }
     }
 }
