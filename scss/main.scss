@@ -87,6 +87,19 @@ header img {
         }
     }
 }
+.flex-wrapper {
+    @media only screen and (min-width: 1200px){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+.concept {
+    @media only screen and (min-width: 1200px) {
+        margin: 2rem;
+        flex-grow: 1;
+    }
+}
 .container-concept {
     margin-left: 0.6rem;
 }
@@ -129,11 +142,19 @@ header img {
 }
 .restaurants {
     background-color: $color-neutral-light;
+    @media only screen and (min-width: 1200px) {
+        margin: 2rem;
+        border-radius: 1rem;
+        flex-grow: 2;
+    }
 }
 .container-restaurants {
     @media only screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    @media only screen and (min-width: 1200px) {
         justify-content: space-between;
     }
 
@@ -146,7 +167,10 @@ header img {
     box-shadow: $box-shadow;
     position: relative;
     @media only screen and (min-width: 768px) {
-        width: 48%
+        width: 48%;
+    }
+    @media only screen and (min-width: 1200px) {
+        width: 31%;
     }
     a[href="#"] {
         display: block;
@@ -185,7 +209,7 @@ header img {
 .restaurant i {
     &:hover {
         &::after {
-            transform: scalex(1);
+            transform: scaley(1);
         }
     }
     &::after {
@@ -204,8 +228,8 @@ header img {
         left:0;
         right:0;
         z-index: 1;
-        transform: scalex(0);
-        transform-origin: top;
+        transform: scaley(0);
+        transform-origin: right;
         transition: transform ease-in-out 250ms;
     }
 }

@@ -1,38 +1,55 @@
-.main-alafrancaise {
+.alafrancaise {
     background-image: url(../img/restaurants/a-la-francaise_wxhas4_c_scale,w_500.jpg);
 
 }
-.main-lanote {
+.lanote {
     background-image: url(../img/restaurants/la-note-enchantee_lrz9i0_c_scale,w_500.jpg);
 
 }
-.main-lapalette {
+.lapalette {
     background-image: url(../img/restaurants/la-palette-du-gout_aqwtpg_c_scale,w_500.jpg);
 
 }
-.main-ledelice {
+.ledelice {
     background-image: url(../img/restaurants/le-delice-des-sens_jv6e9z_c_scale,w_500.jpg);
    
 }
-.main-ledelice, .main-lapalette, .main-lanote, .main-alafrancaise {
+.ledelice, .lapalette, .lanote, .alafrancaise {
     background-position: top;
     background-size: contain;
     padding-top: 14rem;
+}
+.main {
+    @media only screen and (min-width: 1200px) {
+        margin: 2rem;
+        border-radius: 1rem;
+    }
 }
 .menu {
     padding: 1.5rem;
     background-color: $color-neutral-light;
     border-radius: 2rem 2rem 0 0;
+    @media only screen and (min-width: 1200px) {
+        border-radius: 0 0 1rem 1rem;
+    }
     &__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media only screen and (min-width: 1200px) {
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
         i {
             font-size: map-get($font-size, big);
         }
         h1 {
             font-family: "Shrikhand", serif;
             font-weight: normal;
+            @media only screen and (min-width: 1200px) {
+                margin-bottom: 0;
+                margin-right: 1rem;
+            }
         }
     }
     &__box {
