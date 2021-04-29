@@ -181,6 +181,8 @@ header img {
             font-size: map-get($font-size, big);
             z-index: 1;
             position: relative;
+            color: black;
+            transition: background-position ease-in-out 250ms, background-image ease-in-out 250ms;
         }
     }
     &__top {
@@ -208,16 +210,22 @@ header img {
 }
 .restaurant i {
     &:hover {
+        background-image: linear-gradient(to top, $color-primary 10%, $color-secondary 50%, transparent 50%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
         &::after {
-            transform: scaley(1);
+            background-position: bottom;
         }
     }
     &::after {
         content: " \f004 ";
         font-weight: 900;
-        background: -moz-linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
-        background: -webkit-linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
-        background: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+        background-image: linear-gradient(to top, $color-primary 10%, $color-secondary 50%, transparent 50%);
+        background-size: 100% 200%;
+        background-position: top;
+        transition: background-position ease-in-out 250ms, background-image ease-in-out 250ms;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
@@ -228,9 +236,6 @@ header img {
         left:0;
         right:0;
         z-index: 1;
-        transform: scaley(0);
-        transform-origin: right;
-        transition: transform ease-in-out 250ms;
     }
 }
 

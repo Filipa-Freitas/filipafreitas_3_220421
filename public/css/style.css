@@ -347,6 +347,8 @@ header img {
   font-size: 1.5rem;
   z-index: 1;
   position: relative;
+  color: black;
+  transition: background-position ease-in-out 250ms, background-image ease-in-out 250ms;
 }
 .restaurant__top {
   position: relative;
@@ -371,15 +373,23 @@ header img {
   padding: 1rem;
 }
 
+.restaurant i:hover {
+  background-image: linear-gradient(to top, #9356DC 10%, #FF79DA 50%, transparent 50%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .restaurant i:hover::after {
-  transform: scaley(1);
+  background-position: bottom;
 }
 .restaurant i::after {
   content: " ";
   font-weight: 900;
-  background: -moz-linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  background: -webkit-linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  background-image: linear-gradient(to top, #9356DC 10%, #FF79DA 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  transition: background-position ease-in-out 250ms, background-image ease-in-out 250ms;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -390,9 +400,6 @@ header img {
   left: 0;
   right: 0;
   z-index: 1;
-  transform: scaley(0);
-  transform-origin: right;
-  transition: transform ease-in-out 250ms;
 }
 
 footer {
