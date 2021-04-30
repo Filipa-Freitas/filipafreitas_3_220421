@@ -40,6 +40,9 @@ header {
         bottom: 2.1rem;
         left: 1rem;
         color: $colot-neutral-dark;
+        @media only screen and (min-width: 768px) {
+            left: 2rem;
+        }
     }
 }
 header img {

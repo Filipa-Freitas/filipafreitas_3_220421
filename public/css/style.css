@@ -209,6 +209,11 @@ header i {
   left: 1rem;
   color: #3d3d3d;
 }
+@media only screen and (min-width: 768px) {
+  header i {
+    left: 2rem;
+  }
+}
 
 header img {
   width: 150px;
