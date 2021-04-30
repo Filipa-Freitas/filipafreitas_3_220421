@@ -1,34 +1,34 @@
-.alafrancaise {
-    background-image: url(../img/restaurants/a-la-francaise_wxhas4_c_scale,w_500.jpg);
-
-}
-.lanote {
-    background-image: url(../img/restaurants/la-note-enchantee_lrz9i0_c_scale,w_500.jpg);
-
-}
-.lapalette {
-    background-image: url(../img/restaurants/la-palette-du-gout_aqwtpg_c_scale,w_500.jpg);
-
-}
-.ledelice {
-    background-image: url(../img/restaurants/le-delice-des-sens_jv6e9z_c_scale,w_500.jpg);
-   
-}
-.ledelice, .lapalette, .lanote, .alafrancaise {
-    background-position: top;
-    background-size: contain;
-    padding-top: 14rem;
-}
 .main {
+    background-color: $color-neutral-light;
     @media only screen and (min-width: 1200px) {
         margin: 2rem;
         border-radius: 1rem;
+    }
+    .img {
+        height: 15rem;
+        max-height: 15rem;
+        overflow: hidden;
+        @media only screen and (min-width: 1200px) {
+            border-radius: 1rem 1rem 0 0;
+            max-height: 25rem;
+            height: 25rem;
+        }
+        img {
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            @media only screen and (min-width: 1200px) {
+                border-radius: 1rem 1rem 0 0;
+            }
+        }
     }
 }
 .menu {
     padding: 1.5rem;
     background-color: $color-neutral-light;
     border-radius: 2rem 2rem 0 0;
+    position: relative;
+    top:-2rem;
     @media only screen and (min-width: 1200px) {
         border-radius: 0 0 1rem 1rem;
     }
@@ -70,6 +70,10 @@
         font-weight: 300;
         position: relative;
         margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        @media only screen and (min-width: 1200px) {
+            text-align: center;
+        }
     &::after {
         content: " ";
         height: 2px;
@@ -78,6 +82,10 @@
         bottom: -0.4rem;
         position: absolute;
         background-color: $color-tertiary;
+        @media only screen and (min-width: 1200px) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
     }
     &__cat {
@@ -95,7 +103,7 @@
     justify-content: space-between;
     align-items: flex-end;
     background-color: $color-neutral;
-    padding: 0.7rem;
+    padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
     box-shadow: $box-shadow;

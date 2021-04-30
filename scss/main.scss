@@ -18,7 +18,7 @@ h3 , h4 {
 li, input, span, p {
     font-size: map-get($font-size , small );
 }
-h1, h2, h3, h4, li, span, input {
+h1, h2, h3, h4, li, input {
     font-weight: 700;
 }
 p {
@@ -56,6 +56,7 @@ header img {
     border-radius: 20rem;
     padding: 1em 3em;
     box-shadow: $box-shadow;
+    cursor: pointer;
 }
 .map {
     text-align: center;
@@ -98,6 +99,8 @@ header img {
     @media only screen and (min-width: 1200px) {
         margin: 2rem;
         flex-grow: 1;
+        border-radius: 1rem;
+        border: 2px solid $color-neutral-light;
     }
 }
 .container-concept {
@@ -214,6 +217,7 @@ header img {
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
+        background-size: 100% ;
         -webkit-text-fill-color: transparent;
         &::after {
             background-position: bottom;
@@ -225,7 +229,7 @@ header img {
         background-image: linear-gradient(to top, $color-primary 10%, $color-secondary 50%, transparent 50%);
         background-size: 100% 200%;
         background-position: top;
-        transition: background-position ease-in-out 250ms, background-image ease-in-out 250ms;
+        transition: background-position ease-in-out 250ms;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
@@ -266,7 +270,10 @@ footer {
     ul {
         @media only screen and (min-width: 768px) {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
+            li {
+                flex-grow: 1;
+            }
         }
     }
 }

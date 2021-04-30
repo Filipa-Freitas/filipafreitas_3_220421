@@ -25,32 +25,35 @@ time, mark, audio, video {
   list-style: none;
 }
 
-.alafrancaise {
-  background-image: url(../img/restaurants/a-la-francaise_wxhas4_c_scale,w_500.jpg);
+.main {
+  background-color: #f2f2f2;
 }
-
-.lanote {
-  background-image: url(../img/restaurants/la-note-enchantee_lrz9i0_c_scale,w_500.jpg);
-}
-
-.lapalette {
-  background-image: url(../img/restaurants/la-palette-du-gout_aqwtpg_c_scale,w_500.jpg);
-}
-
-.ledelice {
-  background-image: url(../img/restaurants/le-delice-des-sens_jv6e9z_c_scale,w_500.jpg);
-}
-
-.ledelice, .lapalette, .lanote, .alafrancaise {
-  background-position: top;
-  background-size: contain;
-  padding-top: 14rem;
-}
-
 @media only screen and (min-width: 1200px) {
   .main {
     margin: 2rem;
     border-radius: 1rem;
+  }
+}
+.main .img {
+  height: 15rem;
+  max-height: 15rem;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1200px) {
+  .main .img {
+    border-radius: 1rem 1rem 0 0;
+    max-height: 25rem;
+    height: 25rem;
+  }
+}
+.main .img img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  .main .img img {
+    border-radius: 1rem 1rem 0 0;
   }
 }
 
@@ -58,6 +61,8 @@ time, mark, audio, video {
   padding: 1.5rem;
   background-color: #f2f2f2;
   border-radius: 2rem 2rem 0 0;
+  position: relative;
+  top: -2rem;
 }
 @media only screen and (min-width: 1200px) {
   .menu {
@@ -106,6 +111,12 @@ time, mark, audio, video {
   font-weight: 300;
   position: relative;
   margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 1200px) {
+  .menu h3 {
+    text-align: center;
+  }
 }
 .menu h3::after {
   content: " ";
@@ -115,6 +126,12 @@ time, mark, audio, video {
   bottom: -0.4rem;
   position: absolute;
   background-color: #99E2D0;
+}
+@media only screen and (min-width: 1200px) {
+  .menu h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .menu__cat {
   margin-bottom: 1.5rem;
@@ -135,7 +152,7 @@ time, mark, audio, video {
   justify-content: space-between;
   align-items: flex-end;
   background-color: white;
-  padding: 0.7rem;
+  padding: 1rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -166,7 +183,7 @@ li, input, span, p {
   font-size: 0.9rem;
 }
 
-h1, h2, h3, h4, li, span, input {
+h1, h2, h3, h4, li, input {
   font-weight: 700;
 }
 
@@ -207,6 +224,7 @@ header img {
   border-radius: 20rem;
   padding: 1em 3em;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
 }
 
 .map {
@@ -250,6 +268,8 @@ header img {
   .concept {
     margin: 2rem;
     flex-grow: 1;
+    border-radius: 1rem;
+    border: 2px solid #f2f2f2;
   }
 }
 
@@ -378,6 +398,7 @@ header img {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
+  background-size: 100%;
   -webkit-text-fill-color: transparent;
 }
 .restaurant i:hover::after {
@@ -389,7 +410,7 @@ header img {
   background-image: linear-gradient(to top, #9356DC 10%, #FF79DA 50%, transparent 50%);
   background-size: 100% 200%;
   background-position: top;
-  transition: background-position ease-in-out 250ms, background-image ease-in-out 250ms;
+  transition: background-position ease-in-out 250ms;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -432,7 +453,10 @@ footer .fas.fa-hands-helping {
 @media only screen and (min-width: 768px) {
   footer ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+  }
+  footer ul li {
+    flex-grow: 1;
   }
 }
 
