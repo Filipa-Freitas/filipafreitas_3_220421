@@ -74,19 +74,19 @@
         @media only screen and (min-width: 1200px) {
             text-align: center;
         }
-    &::after {
-        content: " ";
-        height: 2px;
-        width: 2rem;
-        left: 0;
-        bottom: -0.4rem;
-        position: absolute;
-        background-color: $color-tertiary;
-        @media only screen and (min-width: 1200px) {
-            left: 50%;
-            transform: translateX(-50%);
+        &::after {
+            content: " ";
+            height: 2px;
+            width: 2rem;
+            left: 0;
+            bottom: -0.4rem;
+            position: absolute;
+            background-color: $color-tertiary;
+            @media only screen and (min-width: 1200px) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
-    }
     }
     &__cat {
         margin-bottom: 1.5rem;

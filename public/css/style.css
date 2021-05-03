@@ -183,7 +183,7 @@ li, input, span, p {
   font-size: 0.9rem;
 }
 
-h1, h2, h3, h4, li, input {
+h1, h2, h3, h4, input {
   font-weight: 700;
 }
 
@@ -195,7 +195,7 @@ header, .map__description, .concept, .restaurants, footer {
   padding: 1.5rem;
 }
 
-header {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -203,25 +203,24 @@ header {
   z-index: 1;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-header i {
+.header__icon {
+  padding: 1rem;
   position: absolute;
-  bottom: 2.1rem;
-  left: 1rem;
+  left: 0.5rem;
   color: #3d3d3d;
 }
-@media only screen and (min-width: 768px) {
-  header i {
-    left: 2rem;
+@media only screen and (min-width: 1200px) {
+  .header__icon {
+    left: 1rem;
   }
 }
-
-header img {
+.header__img img {
   width: 150px;
   height: auto;
 }
 
 .btn {
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   font-family: "Roboto", sans-serif;
   font-size: 0.9rem;
   color: white;
@@ -230,6 +229,10 @@ header img {
   padding: 1em 3em;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background: linear-gradient(to top, #a16be0, #ff93e1);
 }
 
 .map {
@@ -240,29 +243,27 @@ header img {
   background-color: #e5e5e5;
   padding: 1rem;
 }
-.map__form .input-box {
-  margin-left: 2rem;
-}
-.map__form i {
+.map__icon {
   color: #3d3d3d;
+  margin-left: 2.5rem;
 }
-.map__form input {
+.map__input {
   border: none;
   background-color: #e5e5e5;
   outline: none;
   width: 150px;
   color: #3d3d3d;
 }
-.map__description h1 {
-  padding: 0 2rem 0 2rem;
-}
 .map__description .btn {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+.map__title {
+  padding: 0 2rem 0 2rem;
+}
 
 @media only screen and (min-width: 1200px) {
-  .flex-wrapper {
+  .concept-restaurant-container {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -277,29 +278,30 @@ header img {
     border: 2px solid #f2f2f2;
   }
 }
-
-.container-concept {
-  margin-left: 0.6rem;
-}
-
 .concept__item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
   border-radius: 1rem;
   padding: 1.5rem;
   background-color: #f2f2f2;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin-bottom: 1.5rem;
   position: relative;
+  margin-left: 0.6rem;
 }
-.concept__item i {
+.concept__item:last-child {
+  background-color: #f2eafb;
+}
+.concept__item:last-child .concept__icon {
+  color: #9356DC;
+}
+.concept__icon {
   margin-right: 1rem;
   margin-left: 1rem;
   font-size: 1.2rem;
 }
-.concept__item .container-number {
+.concept__position {
   background: #9356DC;
   border-radius: 100%;
   height: 1.5rem;
@@ -310,14 +312,8 @@ header img {
   position: absolute;
   left: -0.6rem;
 }
-.concept__item .container-number span {
+.concept__position .number {
   color: white;
-}
-.concept__item:last-child {
-  background-color: #f2eafb;
-}
-.concept__item:last-child i {
-  color: #9356DC;
 }
 
 .restaurants {
@@ -332,25 +328,27 @@ header img {
 }
 
 @media only screen and (min-width: 768px) {
-  .container-restaurants {
+  .restaurants-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .container-restaurants {
+  .restaurants-container {
     justify-content: space-between;
   }
 }
 
 .restaurant {
-  display: block;
   border-radius: 1rem;
   background-color: white;
   margin-bottom: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   position: relative;
+}
+.restaurant__link {
+  display: block;
 }
 @media only screen and (min-width: 768px) {
   .restaurant {
@@ -362,43 +360,34 @@ header img {
     width: 31%;
   }
 }
-.restaurant a[href="#"] {
-  display: block;
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1rem;
-}
-.restaurant a[href="#"] i {
-  font-size: 1.5rem;
-  z-index: 1;
-  position: relative;
-  color: black;
-  transition: background-position ease-in-out 250ms, background-image ease-in-out 250ms;
-}
-.restaurant__top {
-  position: relative;
-}
-.restaurant__top img {
+.restaurant__img {
   border-radius: 1rem 1rem 0 0;
   height: 10rem;
   object-fit: cover;
 }
-.restaurant__top-new {
+.restaurant__caption {
   position: absolute;
   right: 1rem;
   top: 1rem;
   background-color: #99E2D0;
   border-radius: 0.1rem;
   padding: 0.4rem 1rem;
-}
-.restaurant__top-new span {
   color: #1b6150;
 }
-.restaurant__bottom {
+.restaurant__infos {
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.restaurant i:hover {
+.restaurant__like {
+  font-size: 1.5rem;
+  z-index: 1;
+  position: relative;
+  color: black;
+  transition: background-position ease-in-out 250ms, background-image ease-in-out 250ms;
+}
+.restaurant__like:hover {
   background-image: linear-gradient(to top, #9356DC 10%, #FF79DA 50%, transparent 50%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -406,11 +395,11 @@ header img {
   background-size: 100%;
   -webkit-text-fill-color: transparent;
 }
-.restaurant i:hover::after {
+.restaurant__like:hover::after {
   background-position: bottom;
 }
-.restaurant i::after {
-  content: " ";
+.restaurant__like::after {
+  content: "";
   font-weight: 900;
   background-image: linear-gradient(to top, #9356DC 10%, #FF79DA 50%, transparent 50%);
   background-size: 100% 200%;
@@ -428,41 +417,42 @@ header img {
   z-index: 1;
 }
 
-footer {
+.footer {
   background-color: #3d3d3d;
 }
 @media only screen and (min-width: 768px) {
-  footer {
+  .footer {
     text-align: center;
   }
 }
-footer h4 {
+.footer__title {
   color: white;
   font-family: "Shrikhand", serif;
   font-weight: normal;
   margin-bottom: 1.5rem;
 }
-footer li {
-  margin-bottom: 0.8rem;
-}
-footer a, footer i {
-  color: white;
-  font-weight: 400;
-}
-footer i {
-  margin-right: 0.8rem;
-}
-footer .fas.fa-hands-helping {
-  font-size: 0.6rem;
-}
 @media only screen and (min-width: 768px) {
-  footer ul {
+  .footer__list {
     display: flex;
     justify-content: center;
   }
-  footer ul li {
+  .footer__list .footer__item {
     flex-grow: 1;
   }
+}
+.footer__item {
+  margin-bottom: 0.8rem;
+}
+.footer__item:nth-child(2) .footer__icon {
+  font-size: 0.6rem;
+}
+.footer__link {
+  color: white;
+  display: block;
+}
+.footer__icon {
+  margin-right: 0.8rem;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
