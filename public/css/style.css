@@ -25,39 +25,38 @@ time, mark, audio, video {
   list-style: none;
 }
 
-.main {
+.page-menu {
   background-color: #f2f2f2;
 }
 @media only screen and (min-width: 1200px) {
-  .main {
+  .page-menu {
     margin: 2rem;
     border-radius: 1rem;
   }
 }
-.main .img {
+.page-menu__img {
   height: 15rem;
   max-height: 15rem;
   overflow: hidden;
 }
 @media only screen and (min-width: 1200px) {
-  .main .img {
+  .page-menu__img {
     border-radius: 1rem 1rem 0 0;
     max-height: 25rem;
     height: 25rem;
   }
 }
-.main .img img {
+.page-menu__img img {
   object-fit: cover;
   object-position: center;
   height: 100%;
 }
 @media only screen and (min-width: 1200px) {
-  .main .img img {
+  .page-menu__img img {
     border-radius: 1rem 1rem 0 0;
   }
 }
-
-.menu {
+.page-menu__content {
   padding: 1.5rem;
   background-color: #f2f2f2;
   border-radius: 2rem 2rem 0 0;
@@ -65,60 +64,53 @@ time, mark, audio, video {
   top: -2rem;
 }
 @media only screen and (min-width: 1200px) {
-  .menu {
+  .page-menu__content {
     border-radius: 0 0 1rem 1rem;
   }
 }
-.menu__title {
+.page-menu__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media only screen and (min-width: 1200px) {
-  .menu__title {
+  .page-menu__title {
     justify-content: center;
     margin-bottom: 2rem;
   }
 }
-.menu__title i {
-  font-size: 1.5rem;
-}
-.menu__title h1 {
-  font-family: "Shrikhand", serif;
-  font-weight: normal;
-}
-@media only screen and (min-width: 1200px) {
-  .menu__title h1 {
-    margin-bottom: 0;
-    margin-right: 1rem;
-  }
-}
 @media only screen and (min-width: 768px) {
-  .menu__box {
+  .page-menu__categories {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 }
-.menu .btn-box {
-  text-align: center;
+.page-menu .category {
   margin-bottom: 1.5rem;
 }
-.menu .btn-box .btn {
-  margin-top: 1.5rem;
+@media only screen and (min-width: 768px) {
+  .page-menu .category {
+    width: 48%;
+  }
 }
-.menu h3 {
+@media only screen and (min-width: 1200px) {
+  .page-menu .category {
+    width: 32%;
+  }
+}
+.page-menu .category__title {
   font-weight: 300;
   position: relative;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
 }
 @media only screen and (min-width: 1200px) {
-  .menu h3 {
+  .page-menu .category__title {
     text-align: center;
   }
 }
-.menu h3::after {
+.page-menu .category__title::after {
   content: " ";
   height: 2px;
   width: 2rem;
@@ -128,26 +120,12 @@ time, mark, audio, video {
   background-color: #99E2D0;
 }
 @media only screen and (min-width: 1200px) {
-  .menu h3::after {
+  .page-menu .category__title::after {
     left: 50%;
     transform: translateX(-50%);
   }
 }
-.menu__cat {
-  margin-bottom: 1.5rem;
-}
-@media only screen and (min-width: 768px) {
-  .menu__cat {
-    width: 48%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .menu__cat {
-    width: 32%;
-  }
-}
-
-.card {
+.page-menu .category .card {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -158,12 +136,19 @@ time, mark, audio, video {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 @media only screen and (min-width: 768px) {
-  .card {
+  .page-menu .category .card {
     width: 100%;
   }
 }
-.card__title {
+.page-menu .category .card__title {
   font-weight: bold;
+}
+.page-menu__btn {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.page-menu__btn .btn {
+  margin-top: 1.5rem;
 }
 
 body img {
