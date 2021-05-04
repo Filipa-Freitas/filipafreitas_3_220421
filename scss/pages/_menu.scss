@@ -100,15 +100,15 @@
             margin-bottom: 1rem;
             box-shadow: $box-shadow;
             position: relative;
+            cursor: pointer;
+            overflow: hidden;
             &:hover {
                 strong {
                     position:absolute;
-                    right: 65px;
-                    background-color: $color-neutral;
-                    
+                    transform: translateX(-4.1rem);
                 }
                 &::after {
-                    right:0;
+                    transform: translateX(-4.1rem);
                     
                 }
             }
@@ -117,13 +117,16 @@
                 font-family: "Font Awesome 5 Free";
                 font-weight: 900;
                 color: $color-neutral;
-                padding: 1.29rem;
+                padding: 1.3rem;
                 font-size: map-get($font-size, big);
                 border-radius: 0 1rem 1rem 0;
                 background-color: $color-tertiary;
                 position: absolute;
-                right: -999rem;
+                right: -4.1rem;
                 bottom: 0;
+                transform: translateX(0);
+                
+                transition: transform linear 300ms;
                 
             }
             @media only screen and (min-width: 768px) {
@@ -140,6 +143,8 @@
                 background-color: $color-neutral;
                 bottom: 0;
                 right:0;
+                transform: translateX(0);
+                transition: transform linear 300ms;
             }
         }
     }
