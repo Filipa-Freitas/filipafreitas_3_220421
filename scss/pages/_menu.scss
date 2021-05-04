@@ -35,6 +35,8 @@
     }
     }
     &__title {
+        font-family: "Shrikhand";
+        font-weight: normal;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -90,17 +92,54 @@
         .card {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
+            flex-wrap: nowrap;
             background-color: $color-neutral;
             padding: 1rem;
             border-radius: 1rem;
             margin-bottom: 1rem;
             box-shadow: $box-shadow;
+            position: relative;
+            &:hover {
+                strong {
+                    position:absolute;
+                    right: 65px;
+                    background-color: $color-neutral;
+                    
+                }
+                &::after {
+                    right:0;
+                    
+                }
+            }
+            &::after {
+                content: "\f058";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                color: $color-neutral;
+                padding: 1.29rem;
+                font-size: map-get($font-size, big);
+                border-radius: 0 1rem 1rem 0;
+                background-color: $color-tertiary;
+                position: absolute;
+                right: -999rem;
+                bottom: 0;
+                
+            }
             @media only screen and (min-width: 768px) {
                 width: 100%;
             }
             &__title {
                 font-weight: bold;
+            }
+            &__price {
+                display: block;
+                padding: 1.3rem;
+                position: absolute;
+                border-radius: 0 1rem 1rem 0;
+                background-color: $color-neutral;
+                bottom: 0;
+                right:0;
             }
         }
     }

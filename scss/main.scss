@@ -215,15 +215,13 @@ header, .map__description, .concept, .restaurants, footer {
         z-index: 1;
         position: relative;
         color: black;
-        transition: background-position ease-in-out 250ms, background-image ease-in-out 250ms;
+        transition: color ease-in-out 250ms;
         
         &:hover {
-            background-image: linear-gradient(to top, $color-primary 10%, $color-secondary 50%, transparent 50%);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            background-size: 100% ;
-            -webkit-text-fill-color: transparent;
+            color: $color-secondary;
+            // background-image: $background-btn;
+            // background-clip: text;
+            // -webkit-text-fill-color: transparent;
             &::after {
                 background-position: bottom;
             }
