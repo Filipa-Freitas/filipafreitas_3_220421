@@ -103,8 +103,7 @@
             cursor: pointer;
             overflow: hidden;
             &:hover {
-                strong {
-                    position:absolute;
+                .card__price {
                     transform: translateX(-4.1rem);
                 }
                 &::after {
@@ -124,8 +123,6 @@
                 position: absolute;
                 right: -4.1rem;
                 bottom: 0;
-                transform: translateX(0);
-                
                 transition: transform linear 300ms;
                 
             }
@@ -143,7 +140,6 @@
                 background-color: $color-neutral;
                 bottom: 0;
                 right:0;
-                transform: translateX(0);
                 transition: transform linear 300ms;
             }
         }

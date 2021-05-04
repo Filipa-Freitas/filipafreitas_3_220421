@@ -148,8 +148,7 @@ time, mark, audio, video {
   cursor: pointer;
   overflow: hidden;
 }
-.page-menu .category .card:hover strong {
-  position: absolute;
+.page-menu .category .card:hover .card__price {
   transform: translateX(-4.1rem);
 }
 .page-menu .category .card:hover::after {
@@ -167,7 +166,6 @@ time, mark, audio, video {
   position: absolute;
   right: -4.1rem;
   bottom: 0;
-  transform: translateX(0);
   transition: transform linear 300ms;
 }
 @media only screen and (min-width: 768px) {
@@ -186,7 +184,6 @@ time, mark, audio, video {
   background-color: white;
   bottom: 0;
   right: 0;
-  transform: translateX(0);
   transition: transform linear 300ms;
 }
 .page-menu__btn {
