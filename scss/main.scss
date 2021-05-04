@@ -231,6 +231,7 @@ header, .map__description, .concept, .restaurants, footer {
 
         &::after {
             content: "\f004";
+            font-family: "Font Awesome 5 Free";
             font-weight: 900;
             background-image: linear-gradient(to top, $color-primary 10%, $color-secondary 50%, transparent 50%);
             background-size: 100% 200%;
@@ -260,7 +261,7 @@ header, .map__description, .concept, .restaurants, footer {
         font-family: "Shrikhand", serif;
         font-weight: normal;
         margin-bottom: 1.5rem;
-    }
+       }
     &__list {
         @media only screen and (min-width: 768px) {
             display: flex;

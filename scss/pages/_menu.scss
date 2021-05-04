@@ -38,6 +38,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &::after {
+            content: "\f004";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 400;
+            color: black;
+            margin-left: 1rem;
+        }
         @media only screen and (min-width: 1200px) {
             justify-content: center;
             margin-bottom: 2rem;

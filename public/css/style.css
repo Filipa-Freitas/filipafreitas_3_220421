@@ -73,6 +73,13 @@ time, mark, audio, video {
   justify-content: space-between;
   align-items: center;
 }
+.page-menu__title::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  color: black;
+  margin-left: 1rem;
+}
 @media only screen and (min-width: 1200px) {
   .page-menu__title {
     justify-content: center;
@@ -385,6 +392,7 @@ header, .map__description, .concept, .restaurants, footer {
 }
 .restaurant__like::after {
   content: "";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   background-image: linear-gradient(to top, #9356DC 10%, #FF79DA 50%, transparent 50%);
   background-size: 100% 200%;
