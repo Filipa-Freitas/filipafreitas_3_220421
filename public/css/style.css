@@ -34,6 +34,12 @@ time, mark, audio, video {
     border-radius: 1rem;
   }
 }
+@media only screen and (min-width: 1700px) {
+  .page-menu {
+    max-width: 1700px;
+    margin: 2rem auto 2rem auto;
+  }
+}
 .page-menu__img {
   height: 15rem;
   max-height: 15rem;
@@ -297,13 +303,20 @@ header, .map__description, .concept, .restaurants, footer {
     justify-content: space-between;
   }
 }
+@media only screen and (min-width: 1700px) {
+  .concept-restaurant-container {
+    max-width: 1700px;
+    margin: auto;
+  }
+}
 
 @media only screen and (min-width: 1200px) {
   .concept {
-    margin: 2rem;
+    margin: 2rem 2rem 2rem 0;
     flex-grow: 1;
     border-radius: 1rem;
     border: 2px solid #f2f2f2;
+    min-width: 20rem;
   }
 }
 .concept__item {
@@ -462,6 +475,12 @@ header, .map__description, .concept, .restaurants, footer {
   }
   .footer__list .footer__item {
     flex-grow: 1;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__list {
+    max-width: 1200px;
+    margin: auto;
   }
 }
 .footer__item {

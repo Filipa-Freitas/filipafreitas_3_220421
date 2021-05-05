@@ -103,14 +103,19 @@ header, .map__description, .concept, .restaurants, footer {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
+    @media only screen and (min-width: 1700px) {
+        max-width: 1700px;
+        margin: auto;
+    }
 }
 
 .concept {
     @media only screen and (min-width: 1200px) {
-        margin: 2rem;
+        margin: 2rem 2rem 2rem 0;;
         flex-grow: 1;
         border-radius: 1rem;
         border: 2px solid $color-neutral-light;
+        min-width: 20rem;
     }
 
     &__item {
@@ -219,9 +224,6 @@ header, .map__description, .concept, .restaurants, footer {
         
         &:hover {
             color: $color-secondary;
-            // background-image: $background-btn;
-            // background-clip: text;
-            // -webkit-text-fill-color: transparent;
             &::after {
                 background-position: bottom;
             }
@@ -239,11 +241,11 @@ header, .map__description, .concept, .restaurants, footer {
             -moz-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            position:absolute;
-            top:0;
-            bottom:0;
-            left:0;
-            right:0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             z-index: 1;
         }
     }
@@ -267,6 +269,10 @@ header, .map__description, .concept, .restaurants, footer {
             .footer__item {
                 flex-grow: 1;
             }
+        }
+        @media only screen and (min-width: 768px) {
+            max-width: 1200px;
+            margin: auto;
         }
     }
     &__item {
