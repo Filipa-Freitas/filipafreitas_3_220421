@@ -40,7 +40,7 @@ body {
         justify-content: center;
         align-items: center;
         visibility: hidden;
-        animation: visibility 1300ms ease backwards;
+        animation: visibility 2s ease;
         // &::after {
         //     content: "";
         //     width: 100%;
@@ -64,7 +64,7 @@ body {
         height: 100px;
         position: absolute;
         z-index: 9999;
-        animation: loading 1s 300ms ease 3;
+        animation: loading 1s ease 300ms infinite;
         }
     }
 }

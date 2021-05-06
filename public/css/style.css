@@ -143,7 +143,7 @@ time, mark, audio, video {
 .page-menu .category .card {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: flex-end;
   background-color: white;
   padding: 1rem;
   border-radius: 1rem;
@@ -154,10 +154,10 @@ time, mark, audio, video {
   overflow: hidden;
 }
 .page-menu .category .card:hover .price-box {
-  flex-grow: 2;
+  width: 35%;
 }
-.page-menu .category .card:hover .title-box {
-  flex-shrink: 1;
+.page-menu .category .card:hover .pick {
+  right: 0;
 }
 @media only screen and (min-width: 768px) {
   .page-menu .category .card {
@@ -167,8 +167,13 @@ time, mark, audio, video {
 .page-menu .category .card__title {
   font-weight: bold;
 }
+.page-menu .category .card .price-box {
+  padding: 0.5rem;
+}
 .page-menu .category .card .title-box {
-  flex-basis: 226px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .page-menu .category .card .pick {
   background-color: #99E2D0;
@@ -228,7 +233,7 @@ body .loader {
   justify-content: center;
   align-items: center;
   visibility: hidden;
-  animation: visibility 1300ms ease backwards;
+  animation: visibility 2s ease;
 }
 body .loader::before {
   content: "";
@@ -240,7 +245,7 @@ body .loader::before {
   height: 100px;
   position: absolute;
   z-index: 9999;
-  animation: loading 1s 300ms ease 3;
+  animation: loading 1s ease 300ms infinite;
 }
 
 @keyframes loading {
