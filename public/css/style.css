@@ -230,7 +230,7 @@ body .loader {
   width: 100vw;
   height: 100vh;
   background-color: #99E2D0;
-  position: absolute;
+  position: fixed;
   z-index: 9991;
   display: flex;
   justify-content: center;
