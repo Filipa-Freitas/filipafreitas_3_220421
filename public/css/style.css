@@ -143,8 +143,7 @@ time, mark, audio, video {
 .page-menu .category .card {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+  align-items: stretch;
   background-color: white;
   padding: 1rem;
   border-radius: 1rem;
@@ -154,25 +153,11 @@ time, mark, audio, video {
   cursor: pointer;
   overflow: hidden;
 }
-.page-menu .category .card:hover .card__price {
-  transform: translateX(-4.1rem);
+.page-menu .category .card:hover .price-box {
+  flex-grow: 2;
 }
-.page-menu .category .card:hover::after {
-  transform: translateX(-4.1rem);
-}
-.page-menu .category .card::after {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  color: white;
-  padding: 1.3rem;
-  font-size: 1.5rem;
-  border-radius: 0 1rem 1rem 0;
-  background-color: #99E2D0;
-  position: absolute;
-  right: -4.1rem;
-  bottom: 0;
-  transition: transform linear 300ms;
+.page-menu .category .card:hover .title-box {
+  flex-shrink: 1;
 }
 @media only screen and (min-width: 768px) {
   .page-menu .category .card {
@@ -182,21 +167,25 @@ time, mark, audio, video {
 .page-menu .category .card__title {
   font-weight: bold;
 }
-.page-menu .category .card__price {
-  display: block;
-  padding: 1.3rem;
-  position: absolute;
-  border-radius: 0 1rem 1rem 0;
-  background-color: white;
-  bottom: 0;
-  right: 0;
-  transition: transform linear 300ms;
+.page-menu .category .card .title-box {
+  flex-basis: 226px;
 }
-.page-menu__btn {
+.page-menu .category .card .pick {
+  background-color: #99E2D0;
+  padding: 1.4rem;
+  position: absolute;
+  right: -80px;
+  bottom: 0;
+}
+.page-menu .category .card .pick .icon-check {
+  color: white;
+  font-size: 1.5rem;
+}
+.page-menu__order {
   text-align: center;
   margin-bottom: 1.5rem;
 }
-.page-menu__btn .btn {
+.page-menu__order .btn {
   margin-top: 1.5rem;
 }
 
@@ -229,6 +218,33 @@ header, .map__description, .concept, .restaurants, footer {
   padding: 1.5rem;
 }
 
+body {
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #9356DC;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  top: 45vh;
+  left: 38vw;
+  position: absolute;
+  z-index: 9999;
+  opacity: 0;
+  animation: loading 3s ease 1;
+}
+
+@keyframes loading {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: rotate(3turn);
+  }
+}
 .header {
   display: flex;
   justify-content: center;
