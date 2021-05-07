@@ -25,6 +25,14 @@ time, mark, audio, video {
   list-style: none;
 }
 
+@keyframes appear {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .page-menu {
   background-color: #f2f2f2;
 }
@@ -103,6 +111,9 @@ time, mark, audio, video {
 }
 .page-menu .category {
   margin-bottom: 1.5rem;
+  transform: scale(0);
+  transform-origin: top;
+  animation: appear 1500ms ease-in-out forwards;
 }
 @media only screen and (min-width: 768px) {
   .page-menu .category {
@@ -151,16 +162,28 @@ time, mark, audio, video {
   cursor: pointer;
   overflow: hidden;
 }
-.page-menu .category .card:hover .pick {
+.page-menu .category .card:hover .card__icon {
   margin: -1rem -1rem -1rem -1rem;
 }
-.page-menu .category .card:hover .icon-check {
+.page-menu .category .card:hover .check {
   transform: rotate(1turn);
 }
 @media only screen and (min-width: 768px) {
   .page-menu .category .card {
     width: 100%;
   }
+}
+.page-menu .category .card__price {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 5.5rem;
+}
+.page-menu .category .card__text {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .page-menu .category .card__title {
   font-weight: bold;
@@ -173,19 +196,7 @@ time, mark, audio, video {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.page-menu .category .card .price-box {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.page-menu .category .card .title-box {
-  flex: 2;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.page-menu .category .card .pick {
+.page-menu .category .card__icon {
   background-color: #99E2D0;
   width: 5rem;
   margin: -1rem -6rem -1rem -1rem;
@@ -194,10 +205,16 @@ time, mark, audio, video {
   align-items: center;
   transition: all ease-in-out 400ms;
 }
-.page-menu .category .card .pick .icon-check {
+.page-menu .category .card__icon .check {
   color: white;
   font-size: 1.5rem;
   transition: all ease-in-out 400ms;
+}
+.page-menu .delay-1 {
+  animation-delay: 0.5s;
+}
+.page-menu .delay-2 {
+  animation-delay: 1s;
 }
 .page-menu__order {
   text-align: center;
@@ -236,7 +253,7 @@ header, .map__description, .concept, .restaurants, footer {
   padding: 1.5rem;
 }
 
-body .loader {
+.loader {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.35);
@@ -247,9 +264,9 @@ body .loader {
   align-items: center;
   opacity: 0.8;
   visibility: hidden;
-  animation: visibility 2s ease;
+  animation: visibility 3s ease;
 }
-body .loader::before {
+.loader::before {
   content: "";
   position: absolute;
   border: 3px solid #f3f3f3;
@@ -259,7 +276,7 @@ body .loader::before {
   height: 100px;
   position: absolute;
   z-index: 9999;
-  animation: loading 1s ease 300ms infinite;
+  animation: loading 1s ease 300ms 3;
 }
 
 @keyframes loading {

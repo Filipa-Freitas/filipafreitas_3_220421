@@ -28,45 +28,30 @@ p {
 header, .map__description, .concept, .restaurants, footer {
     padding: 1.5rem;
     }
-body {
-    // position: relative;
-    .loader {
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.35);
-        position: fixed;
-        z-index: 9991;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0.8;
-        visibility: hidden;
-        animation: visibility 2s ease;
-        // &::after {
-        //     content: "";
-        //     width: 100%;
-        //     height: 100vh;
-        //     top:0;
-        //     position: absolute;
-        //     background-color: $color-tertiary;
-        //     z-index: 999;
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-        //     opacity: 0;
-        // }
-        &::before {
-            content: "";
-            position: absolute;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid $color-primary;
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            z-index: 9999;
-            animation: loading 1s ease 300ms infinite;
-        }
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.35);
+    position: fixed;
+    z-index: 9991;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    visibility: hidden;
+    animation: visibility 3s ease;
+    &::before {
+        content: "";
+        position: absolute;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid $color-primary;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        z-index: 9999;
+        animation: loading 1s ease 300ms 3;
     }
 }
 
