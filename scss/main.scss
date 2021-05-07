@@ -30,15 +30,16 @@ header, .map__description, .concept, .restaurants, footer {
     }
 body {
     // position: relative;
-        .loader {
+    .loader {
         width: 100vw;
         height: 100vh;
-        background-color: $color-tertiary;
+        background-color: rgba(0, 0, 0, 0.35);
         position: fixed;
         z-index: 9991;
         display: flex;
         justify-content: center;
         align-items: center;
+        opacity: 0.8;
         visibility: hidden;
         animation: visibility 2s ease;
         // &::after {
@@ -55,16 +56,16 @@ body {
         //     opacity: 0;
         // }
         &::before {
-        content: "";
-        position: absolute;
-        border: 3px solid #f3f3f3;
-        border-top: 3px solid $color-primary;
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        z-index: 9999;
-        animation: loading 1s ease 300ms infinite;
+            content: "";
+            position: absolute;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid $color-primary;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            z-index: 9999;
+            animation: loading 1s ease 300ms infinite;
         }
     }
 }

@@ -94,8 +94,6 @@
         }
         .card {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
             background-color: $color-neutral;
             padding: 1rem;
             border-radius: 1rem;
@@ -105,38 +103,13 @@
             cursor: pointer;
             overflow: hidden;
             &:hover {
-                .price-box {
-                    // transform: translateX(-100px);
-                    width: 35%;
-                }
                 .pick {
-                    right: 0;
+                    margin: -1rem -1rem -1rem -1rem;
+                }
+                .icon-check {
+                    transform: rotate(1turn);
                 }
             }
-            // &:hover {
-            //     // .card__price {
-            //     //     transform: translateX(-4.1rem);
-            //     // }
-            //     // &::after {
-            //     //     transform: translateX(-4.1rem);
-                    
-            //     }
-            // }
-            // &::after {
-            //     content: "\f058";
-            //     font-family: "Font Awesome 5 Free";
-            //     font-weight: 900;
-            //     color: $color-neutral;
-            //     padding: 1.3rem;
-            //     font-size: map-get($font-size, big);
-            //     border-radius: 0 1rem 1rem 0;
-            //     background-color: $color-tertiary;
-            //     position: absolute;
-            //     right: -4.1rem;
-            //     bottom: 0;
-            //     transition: transform linear 300ms;
-                
-            // }
             @media only screen and (min-width: 768px) {
                 width: 100%;
             }
@@ -146,11 +119,19 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;
             }
+            &__description {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
             .price-box {
-                // flex: auto;
-                padding: 0.5rem;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
             }
             .title-box {
+                flex: 2;
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
@@ -158,25 +139,18 @@
             }
             .pick {
                 background-color: $color-tertiary;
-                padding: 1.4rem;
-                position: absolute;
-                right: -80px;
-                bottom: 0;
+                width: 5rem;
+                margin: -1rem -6rem -1rem -1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all ease-in-out 400ms;
                 .icon-check {
                     color: $color-neutral;
                     font-size: map-get($font-size, big);
+                    transition: all ease-in-out 400ms;
                 }
             }
-            // &__price {
-            //     display: block;
-            //     padding: 1.3rem;
-            //     position: absolute;
-            //     border-radius: 0 1rem 1rem 0;
-            //     background-color: $color-neutral;
-            //     bottom: 0;
-            //     right:0;
-            //     transition: transform linear 300ms;
-            // }
         }
     }
     &__order {

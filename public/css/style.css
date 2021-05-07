@@ -142,8 +142,6 @@ time, mark, audio, video {
 }
 .page-menu .category .card {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   background-color: white;
   padding: 1rem;
   border-radius: 1rem;
@@ -153,11 +151,11 @@ time, mark, audio, video {
   cursor: pointer;
   overflow: hidden;
 }
-.page-menu .category .card:hover .price-box {
-  width: 35%;
-}
 .page-menu .category .card:hover .pick {
-  right: 0;
+  margin: -1rem -1rem -1rem -1rem;
+}
+.page-menu .category .card:hover .icon-check {
+  transform: rotate(1turn);
 }
 @media only screen and (min-width: 768px) {
   .page-menu .category .card {
@@ -170,24 +168,36 @@ time, mark, audio, video {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.page-menu .category .card__description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .page-menu .category .card .price-box {
-  padding: 0.5rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 .page-menu .category .card .title-box {
+  flex: 2;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .page-menu .category .card .pick {
   background-color: #99E2D0;
-  padding: 1.4rem;
-  position: absolute;
-  right: -80px;
-  bottom: 0;
+  width: 5rem;
+  margin: -1rem -6rem -1rem -1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 400ms;
 }
 .page-menu .category .card .pick .icon-check {
   color: white;
   font-size: 1.5rem;
+  transition: all ease-in-out 400ms;
 }
 .page-menu__order {
   text-align: center;
@@ -229,12 +239,13 @@ header, .map__description, .concept, .restaurants, footer {
 body .loader {
   width: 100vw;
   height: 100vh;
-  background-color: #99E2D0;
+  background-color: rgba(0, 0, 0, 0.35);
   position: fixed;
   z-index: 9991;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.8;
   visibility: hidden;
   animation: visibility 2s ease;
 }
