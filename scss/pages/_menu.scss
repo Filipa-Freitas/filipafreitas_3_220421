@@ -1,9 +1,9 @@
 @keyframes appear {
     from {
-        transform: scale(0);
+        opacity: 0;
     }
     to {
-        transform: scale(1);
+        opacity: 1;
     }
 }
 .page-menu {
@@ -72,9 +72,7 @@
     }
     .category {
         margin-bottom: 1.5rem;
-        transform: scale(0);
-        transform-origin: top;
-        animation: appear 1500ms ease-in-out forwards;
+        animation: appear 1500ms ease-in-out both;
         @media only screen and (min-width: 768px) {
             width: 48%;
         }

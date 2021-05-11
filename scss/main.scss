@@ -30,8 +30,10 @@ header, .map__description, .concept, .restaurants, footer {
     }
 
 .loader {
-    width: 100vw;
-    height: 100vh;
+    width: 300vw;
+    height: 300vh;
+    top: -100%;
+    left: -100%;
     background-color: rgba(0, 0, 0, 0.35);
     position: fixed;
     z-index: 9991;
@@ -39,8 +41,8 @@ header, .map__description, .concept, .restaurants, footer {
     justify-content: center;
     align-items: center;
     opacity: 0.8;
-    visibility: hidden;
-    animation: visibility 3s ease;
+    visibility: visible;
+    animation: loading 3s ease forwards;
     &::before {
         content: "";
         position: absolute;
@@ -51,20 +53,30 @@ header, .map__description, .concept, .restaurants, footer {
         height: 100px;
         position: absolute;
         z-index: 9999;
-        animation: loading 1s ease 300ms 3;
+        // animation: loading 1s ease 300ms 3;
     }
 }
 
 @keyframes loading {
-    to{
+    0% {
         transform: rotate(1turn);
     }
-}
-@keyframes visibility {
-    to {
-        visibility: visible;
+    30% {
+        transform: rotate(2turn);
+    }
+    60% {
+        transform: rotate(3turn);
+    }
+    100% {
+        transform: rotate(4turn);
+        visibility: hidden;
     }
 }
+// @keyframes visibility {
+//     to {
+//         visibility: visible;
+//     }
+// }
 
 .header {
     display:flex;

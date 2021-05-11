@@ -27,10 +27,10 @@ time, mark, audio, video {
 
 @keyframes appear {
   from {
-    transform: scale(0);
+    opacity: 0;
   }
   to {
-    transform: scale(1);
+    opacity: 1;
   }
 }
 .page-menu {
@@ -111,9 +111,7 @@ time, mark, audio, video {
 }
 .page-menu .category {
   margin-bottom: 1.5rem;
-  transform: scale(0);
-  transform-origin: top;
-  animation: appear 1500ms ease-in-out forwards;
+  animation: appear 1500ms ease-in-out both;
 }
 @media only screen and (min-width: 768px) {
   .page-menu .category {
@@ -254,8 +252,10 @@ header, .map__description, .concept, .restaurants, footer {
 }
 
 .loader {
-  width: 100vw;
-  height: 100vh;
+  width: 300vw;
+  height: 300vh;
+  top: -100%;
+  left: -100%;
   background-color: rgba(0, 0, 0, 0.35);
   position: fixed;
   z-index: 9991;
@@ -263,8 +263,8 @@ header, .map__description, .concept, .restaurants, footer {
   justify-content: center;
   align-items: center;
   opacity: 0.8;
-  visibility: hidden;
-  animation: visibility 3s ease;
+  visibility: visible;
+  animation: loading 3s ease forwards;
 }
 .loader::before {
   content: "";
@@ -276,17 +276,21 @@ header, .map__description, .concept, .restaurants, footer {
   height: 100px;
   position: absolute;
   z-index: 9999;
-  animation: loading 1s ease 300ms 3;
 }
 
 @keyframes loading {
-  to {
+  0% {
     transform: rotate(1turn);
   }
-}
-@keyframes visibility {
-  to {
-    visibility: visible;
+  30% {
+    transform: rotate(2turn);
+  }
+  60% {
+    transform: rotate(3turn);
+  }
+  100% {
+    transform: rotate(4turn);
+    visibility: hidden;
   }
 }
 .header {
