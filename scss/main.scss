@@ -268,28 +268,28 @@ header, .map__description, .concept, .restaurants, footer {
         &:hover {
             color: $color-secondary;
             &::after {
-                background-position: bottom;
+                opacity: 1;
             }
         }
 
         &::after {
-            content: "\f004";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            background-image: linear-gradient(to top, $color-primary 10%, $color-secondary 50%, transparent 50%);
-            background-size: 100% 200%;
-            background-position: top;
-            transition: background-position ease-in-out 250ms;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            content: url(./public/img/icon/heart-solid.svg);
+            // font-family: "Font Awesome 5 Free";
+            // font-weight: 900;
+            color: pink;
+            // background-size: 100% 200%;
+            // background-position: top;
+            transition: opacity ease-in-out 250ms;
+            // -webkit-background-clip: text;
+            // -moz-background-clip: text;
+            // background-clip: text;
+            // -webkit-text-fill-color: transparent;
             position: absolute;
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
-            z-index: 1;
+            opacity: 1;
         }
     }
 }
