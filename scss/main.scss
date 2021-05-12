@@ -42,7 +42,7 @@ header, .map__description, .concept, .restaurants, footer {
     align-items: center;
     opacity: 0.8;
     visibility: visible;
-    animation: loading 3s ease forwards;
+    animation: loading 1s ease forwards;
     &::before {
         content: "";
         position: absolute;
@@ -336,15 +336,20 @@ header, .map__description, .concept, .restaurants, footer {
     }
 }
 
-.heart {
-    overflow: visible;
-}
-path {
-    stroke: black;
-    stroke-width: 2px;
-    transition: all 300ms;
-    &:hover {
-        stroke: url("#heart-gradient");
-        fill: url("#heart-gradient");
+// .heart {
+//     overflow: visible;
+// }
+// path {
+//     stroke: black;
+//     stroke-width: 2px;
+//     transition: all 300ms;
+//     &:hover {
+//         stroke: url("#heart-gradient");
+//         fill: url("#heart-gradient");
+//     }
+// }
+
+
+    #myClip {
+        transform: translateY(50px);
     }
-}
