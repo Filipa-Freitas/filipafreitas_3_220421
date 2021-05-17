@@ -1,0 +1,39 @@
+.footer {
+    background-color: $colot-neutral-dark;
+    @media only screen and (min-width: 768px) {
+        text-align: center;
+    }
+    &__title {
+        color: $color-neutral;
+        font-family: "Shrikhand", serif;
+        font-weight: normal;
+        margin-bottom: 1.5rem;
+       }
+    &__list {
+        @media only screen and (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            .footer__item {
+                flex-grow: 1;
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            max-width: 1200px;
+            margin: auto;
+        }
+    }
+    &__item {
+        margin-bottom: 0.8rem;
+        &:nth-child(2) .footer__icon {
+            font-size: 0.6rem;
+        }
+    }
+    &__link {
+        color: $color-neutral;
+        display: block;
+    }
+    &__icon {
+        margin-right: 0.8rem;
+        color: $color-neutral;
+    }
+}

@@ -1,0 +1,24 @@
+@keyframes loading {
+    0% {
+        transform: rotate(1turn);
+    }
+    30% {
+        transform: rotate(2turn);
+    }
+    60% {
+        transform: rotate(3turn);
+    }
+    100% {
+        transform: rotate(4turn);
+        visibility: hidden;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

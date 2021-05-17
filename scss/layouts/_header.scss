@@ -1,0 +1,21 @@
+.header {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: $box-shadow;
+    &__icon {
+        padding: 1rem;
+        position: absolute;
+        left: 0.5rem;
+        color: $colot-neutral-dark;
+        @media only screen and (min-width: 1200px) {
+            left: 1rem;
+        }
+    }
+    &__img img {
+        width: 150px;
+        height:auto;
+    }
+}

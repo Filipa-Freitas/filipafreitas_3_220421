@@ -1,0 +1,15 @@
+.btn {
+    background: $background-btn;   
+    font-family: "Roboto", sans-serif;
+    font-size: map-get($font-size , small);
+    color: $color-neutral;
+    border: none;
+    border-radius: 20rem;
+    padding: 1em 3em;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    &:hover {
+        box-shadow: $box-shadow-hover;
+        background: $background-btn-hover;
+    }
+}
