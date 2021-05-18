@@ -13,9 +13,8 @@ header, .map__description, .concept, .restaurants, footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.8;
     visibility: visible;
-    animation: loading 1s ease forwards;
+    animation: loading 2s ease forwards;
     &::before {
         content: "";
         position: absolute;

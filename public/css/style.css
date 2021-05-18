@@ -187,9 +187,8 @@ header, .map__description, .concept, .restaurants, footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.8;
   visibility: visible;
-  animation: loading 1s ease forwards;
+  animation: loading 2s ease forwards;
 }
 .loader::before {
   content: "";
@@ -460,105 +459,6 @@ header, .map__description, .concept, .restaurants, footer {
     justify-content: space-between;
   }
 }
-.page-menu .category {
-  margin-bottom: 1.5rem;
-  animation: appear 1500ms ease-in-out both;
-}
-@media only screen and (min-width: 768px) {
-  .page-menu .category {
-    width: 48%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .page-menu .category {
-    width: 32%;
-  }
-}
-.page-menu .category__title {
-  font-weight: 300;
-  position: relative;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-}
-@media only screen and (min-width: 1200px) {
-  .page-menu .category__title {
-    text-align: center;
-  }
-}
-.page-menu .category__title::after {
-  content: " ";
-  height: 2px;
-  width: 2rem;
-  left: 0;
-  bottom: -0.4rem;
-  position: absolute;
-  background-color: #99E2D0;
-}
-@media only screen and (min-width: 1200px) {
-  .page-menu .category__title::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-.page-menu .category .card {
-  display: flex;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-}
-.page-menu .category .card:hover .card__icon {
-  margin: -1rem -1rem -1rem -1rem;
-}
-.page-menu .category .card:hover .check {
-  transform: rotate(1turn);
-}
-@media only screen and (min-width: 768px) {
-  .page-menu .category .card {
-    width: 100%;
-  }
-}
-.page-menu .category .card__price {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 5.5rem;
-}
-.page-menu .category .card__text {
-  flex: 1;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.page-menu .category .card__title {
-  font-weight: bold;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.page-menu .category .card__description {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.page-menu .category .card__icon {
-  background-color: #99E2D0;
-  width: 5rem;
-  margin: -1rem -6rem -1rem -1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all ease-in-out 400ms;
-}
-.page-menu .category .card__icon .check {
-  color: white;
-  font-size: 1.5rem;
-  transition: all ease-in-out 400ms;
-}
 .page-menu .delay-1 {
   animation-delay: 0.5s;
 }
@@ -571,6 +471,107 @@ header, .map__description, .concept, .restaurants, footer {
 }
 .page-menu__order .btn {
   margin-top: 1.5rem;
+}
+
+.category {
+  margin-bottom: 1.5rem;
+  animation: appear 1500ms ease-in-out both;
+}
+@media only screen and (min-width: 768px) {
+  .category {
+    width: 48%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .category {
+    width: 32%;
+  }
+}
+.category__title {
+  font-weight: 300;
+  position: relative;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 1200px) {
+  .category__title {
+    text-align: center;
+  }
+}
+.category__title::after {
+  content: " ";
+  height: 2px;
+  width: 2rem;
+  left: 0;
+  bottom: -0.4rem;
+  position: absolute;
+  background-color: #99E2D0;
+}
+@media only screen and (min-width: 1200px) {
+  .category__title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.card {
+  display: flex;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.card:hover .card__icon {
+  margin: -1rem -1rem -1rem -1rem;
+}
+.card:hover .check {
+  transform: rotate(1turn);
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+.card__price {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 5.5rem;
+}
+.card__text {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card__title {
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card__description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card__icon {
+  background-color: #99E2D0;
+  width: 5rem;
+  margin: -1rem -6rem -1rem -1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 400ms;
+}
+.card__icon .check {
+  color: white;
+  font-size: 1.5rem;
+  transition: all ease-in-out 400ms;
 }
 
 /*# sourceMappingURL=style.css.map */
