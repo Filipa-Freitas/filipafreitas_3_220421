@@ -380,7 +380,6 @@ header, .map__description, .concept, .restaurants, footer {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
 }
 
 .page-menu {
