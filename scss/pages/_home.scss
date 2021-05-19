@@ -194,10 +194,9 @@ header, .map__description, .concept, .restaurants, footer {
             font-family: "Font Awesome 5 Free";
             content: "\f004";
             font-weight: 900;
-            background-image: linear-gradient(to top, $color-primary 10%, $color-secondary 50%, transparent 50%);
+            background: linear-gradient(to top, $color-primary 10%, $color-secondary 50%, transparent 50%);
             background-size: 100% 200%;
             background-position: top;
-            transition: background-position ease-in-out 250ms;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             position:absolute;
@@ -205,6 +204,7 @@ header, .map__description, .concept, .restaurants, footer {
             bottom:0;
             left:0;
             right:0;
+            transition: background-position ease-in-out 250ms;
         }
     }
 }
