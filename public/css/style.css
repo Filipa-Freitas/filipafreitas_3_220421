@@ -198,7 +198,6 @@ header, .map__description, .concept, .restaurants, footer {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  position: absolute;
   z-index: 9999;
 }
 
