@@ -3,10 +3,8 @@ header, .map__description, .concept, .restaurants, footer {
 }
 
 .loader {
-    width: 300vw;
-    height: 300vh;
-    top: -100%;
-    left: -100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.35);
     position: fixed;
     z-index: 9991;
@@ -14,7 +12,7 @@ header, .map__description, .concept, .restaurants, footer {
     justify-content: center;
     align-items: center;
     visibility: visible;
-    animation: loading 2s ease forwards;
+    animation: vh 2s ease forwards;
     &::before {
         content: "";
         position: absolute;
@@ -24,6 +22,7 @@ header, .map__description, .concept, .restaurants, footer {
         width: 100px;
         height: 100px;
         z-index: 9999;
+        animation: loading 2s ease forwards;
     }
 }
 
